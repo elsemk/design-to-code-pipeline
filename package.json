@@ -1,0 +1,18 @@
+{
+  "name": "design-to-code-pipeline",
+  "version": "0.1.0",
+  "description": "Screenshot-to-HTML/CSS pipeline with normalization and visual regression",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "normalize": "node scripts/normalize.js",
+    "regress": "node scripts/regression.js",
+    "check": "npm run normalize && npm run regress"
+  },
+  "devDependencies": {
+    "cheerio": "^1.1.2",
+    "pixelmatch": "^7.1.0",
+    "playwright": "^1.52.0",
+    "pngjs": "^7.0.0"
+  }
+}

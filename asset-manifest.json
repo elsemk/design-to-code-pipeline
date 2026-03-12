@@ -1,0 +1,17 @@
+{
+  "version": "1.0.0",
+  "assets": [
+    {
+      "nodeId": "example:hero-bg",
+      "name": "hero-bg",
+      "type": "background",
+      "usage": "decorative",
+      "path": "./assets/hero-bg@2x.webp",
+      "fallbackPath": "./assets/hero-bg@1x.webp",
+      "width": 2880,
+      "height": 1620,
+      "scale": "2x",
+      "hash": "sha256-replace-me"
+    }
+  ]
+}

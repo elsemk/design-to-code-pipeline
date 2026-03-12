@@ -1,0 +1,29 @@
+{
+  "breakpoints": [1440, 1024, 768, 375],
+  "screenshotHeight": 1600,
+  "layout": {
+    "containerMaxWidth": 1200,
+    "containerPadding": {
+      "desktop": 24,
+      "tablet": 20,
+      "mobile": 16
+    },
+    "preferFlexGrid": true,
+    "allowAbsoluteOnlyFor": ["overlay", "decorative"]
+  },
+  "naming": {
+    "method": "bem"
+  },
+  "a11y": {
+    "requireImgAlt": true,
+    "minTapTarget": 44
+  },
+  "tokensPolicy": {
+    "strict": true,
+    "allowRawValues": ["0", "100%", "auto", "none", "transparent", "currentColor", "inherit", "initial", "unset"]
+  },
+  "regression": {
+    "maxDiffRatio": 0.03,
+    "pixelmatchThreshold": 0.1
+  }
+}
