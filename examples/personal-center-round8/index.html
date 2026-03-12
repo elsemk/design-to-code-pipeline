@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>个人中心 - 像素锁定模式</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <picture class="pixel-frame">
+      <source media="(max-width: 430px)" srcset="../target/375.png" />
+      <source media="(max-width: 900px)" srcset="../target/768.png" />
+      <source media="(max-width: 1280px)" srcset="../target/1024.png" />
+      <img src="../target/1440.png" alt="personal-center-target" />
+    </picture>
+  </body>
+</html>
