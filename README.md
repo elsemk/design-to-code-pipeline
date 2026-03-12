@@ -114,7 +114,7 @@ npm run check
 - 用 Playwright 渲染 `normalized/index.html`
 - 按断点自动截图
 - 用 pixelmatch 计算差异并输出 `diff` 图
-- 按 `rules.json` 的阈值判定 PASS/FAIL
+- 按 `rules.json` 阈值判定 PASS/FAIL（支持全局 `maxDiffRatio` + `perBreakpointMaxDiff`）
 
 ## 推荐工作流
 

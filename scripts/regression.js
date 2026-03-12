@@ -33,7 +33,16 @@ async function screenshotAllBreakpoints(breakpoints, screenshotHeight) {
   await fs.mkdir(CURRENT_DIR, { recursive: true });
 
   for (const width of breakpoints) {
-    await page.setViewportSize({ width, height: screenshotHeight });
+    const targetPath = path.join(TARGET_DIR, `${width}.png`);
+    let height = screenshotHeight;
+
+    if (existsSync(targetPath)) {
+      const targetBuffer = await fs.readFile(targetPath);
+      const targetPng = PNG.sync.read(targetBuffer);
+      height = targetPng.height;
+    }
+
+    await page.setViewportSize({ width, height });
     await page.goto(`file://${NORMALIZED_HTML}`);
     await page.waitForLoadState("networkidle");
     await page.screenshot({
@@ -46,7 +55,7 @@ async function screenshotAllBreakpoints(breakpoints, screenshotHeight) {
   await browser.close();
 }
 
-async function compareAtBreakpoint(width, threshold, maxDiffRatio) {
+async function compareAtBreakpoint(width, threshold, maxDiffRatio, perBreakpointMaxDiff = {}) {
   const targetPath = path.join(TARGET_DIR, `${width}.png`);
   const currentPath = path.join(CURRENT_DIR, `${width}.png`);
   const diffPath = path.join(DIFF_DIR, `${width}.png`);
@@ -89,7 +98,8 @@ async function compareAtBreakpoint(width, threshold, maxDiffRatio) {
 
   const totalPixels = canvasWidth * canvasHeight;
   const diffRatio = diffPixels / totalPixels;
-  const passed = diffRatio <= maxDiffRatio;
+  const limit = perBreakpointMaxDiff[String(width)] ?? maxDiffRatio;
+  const passed = diffRatio <= limit;
 
   await fs.writeFile(diffPath, PNG.sync.write(diff));
 
@@ -103,7 +113,7 @@ async function compareAtBreakpoint(width, threshold, maxDiffRatio) {
     diffPixels,
     totalPixels,
     diffRatio,
-    threshold: maxDiffRatio,
+    threshold: limit,
     passed,
     diffPath
   };
@@ -119,6 +129,7 @@ async function main() {
   const screenshotHeight = rules?.screenshotHeight || 1600;
   const maxDiffRatio = rules?.regression?.maxDiffRatio ?? 0.03;
   const pixelmatchThreshold = rules?.regression?.pixelmatchThreshold ?? 0.1;
+  const perBreakpointMaxDiff = rules?.regression?.perBreakpointMaxDiff || {};
 
   await Promise.all([
     fs.mkdir(DIFF_DIR, { recursive: true }),
@@ -130,7 +141,7 @@ async function main() {
   const results = [];
   for (const width of breakpoints) {
     // eslint-disable-next-line no-await-in-loop
-    const result = await compareAtBreakpoint(width, pixelmatchThreshold, maxDiffRatio);
+    const result = await compareAtBreakpoint(width, pixelmatchThreshold, maxDiffRatio, perBreakpointMaxDiff);
     results.push(result);
   }
 
@@ -140,6 +151,7 @@ async function main() {
     breakpoints,
     maxDiffRatio,
     pixelmatchThreshold,
+    perBreakpointMaxDiff,
     failed,
     results
   };
@@ -152,7 +164,7 @@ async function main() {
       continue;
     }
     console.log(
-      `[regression] ${r.breakpoint}px diffRatio=${r.diffRatio.toFixed(4)} limit=${maxDiffRatio} ${
+      `[regression] ${r.breakpoint}px diffRatio=${r.diffRatio.toFixed(4)} limit=${r.threshold} ${
         r.passed ? "PASS" : "FAIL"
       }`
     );

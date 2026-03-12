@@ -1,0 +1,106 @@
+{
+  "generatedAt": "2026-03-12T08:06:46.817Z",
+  "breakpoints": [
+    1440,
+    1024,
+    768,
+    375
+  ],
+  "maxDiffRatio": 0.03,
+  "pixelmatchThreshold": 0.1,
+  "failed": true,
+  "results": [
+    {
+      "breakpoint": 1440,
+      "status": "ok",
+      "targetSize": [
+        1440,
+        875
+      ],
+      "currentSize": [
+        1440,
+        875
+      ],
+      "canvasSize": [
+        1440,
+        875
+      ],
+      "dimensionMismatch": false,
+      "diffPixels": 125412,
+      "totalPixels": 1260000,
+      "diffRatio": 0.09953333333333333,
+      "threshold": 0.03,
+      "passed": false,
+      "diffPath": "/root/.openclaw/workspace/design-to-code-pipeline/diff/1440.png"
+    },
+    {
+      "breakpoint": 1024,
+      "status": "ok",
+      "targetSize": [
+        1024,
+        622
+      ],
+      "currentSize": [
+        1024,
+        622
+      ],
+      "canvasSize": [
+        1024,
+        622
+      ],
+      "dimensionMismatch": false,
+      "diffPixels": 65845,
+      "totalPixels": 636928,
+      "diffRatio": 0.10337903185289389,
+      "threshold": 0.03,
+      "passed": false,
+      "diffPath": "/root/.openclaw/workspace/design-to-code-pipeline/diff/1024.png"
+    },
+    {
+      "breakpoint": 768,
+      "status": "ok",
+      "targetSize": [
+        768,
+        466
+      ],
+      "currentSize": [
+        768,
+        466
+      ],
+      "canvasSize": [
+        768,
+        466
+      ],
+      "dimensionMismatch": false,
+      "diffPixels": 34322,
+      "totalPixels": 357888,
+      "diffRatio": 0.09590151108726752,
+      "threshold": 0.03,
+      "passed": false,
+      "diffPath": "/root/.openclaw/workspace/design-to-code-pipeline/diff/768.png"
+    },
+    {
+      "breakpoint": 375,
+      "status": "ok",
+      "targetSize": [
+        375,
+        852
+      ],
+      "currentSize": [
+        375,
+        852
+      ],
+      "canvasSize": [
+        375,
+        852
+      ],
+      "dimensionMismatch": false,
+      "diffPixels": 48109,
+      "totalPixels": 319500,
+      "diffRatio": 0.15057589984350547,
+      "threshold": 0.03,
+      "passed": false,
+      "diffPath": "/root/.openclaw/workspace/design-to-code-pipeline/diff/375.png"
+    }
+  ]
+}

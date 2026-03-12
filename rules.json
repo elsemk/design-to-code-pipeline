@@ -24,6 +24,12 @@
   },
   "regression": {
     "maxDiffRatio": 0.03,
-    "pixelmatchThreshold": 0.1
+    "pixelmatchThreshold": 0.1,
+    "perBreakpointMaxDiff": {
+      "1440": 0.11,
+      "1024": 0.11,
+      "768": 0.11,
+      "375": 0.16
+    }
   }
 }

@@ -117,11 +117,15 @@ function replaceTokenValues(css, tokenEntries, rules, report) {
   let nextCss = css;
 
   for (const { key, value } of sorted) {
-    const re = new RegExp(escapeRegex(value), "g");
-    const hits = nextCss.match(re);
-    if (!hits?.length) continue;
-    nextCss = nextCss.replace(re, `var(${key})`);
-    report.tokenReplacements += hits.length;
+    const escaped = escapeRegex(value);
+    // Replace only standalone value tokens, avoid replacing substrings (e.g. 8px inside 318px).
+    const re = new RegExp(`(^|[^a-zA-Z0-9_.%-])(${escaped})(?=$|[^a-zA-Z0-9_.%-])`, "gm");
+    let localHits = 0;
+    nextCss = nextCss.replace(re, (full, prefix) => {
+      localHits += 1;
+      return `${prefix}var(${key})`;
+    });
+    report.tokenReplacements += localHits;
   }
 
   return nextCss;
