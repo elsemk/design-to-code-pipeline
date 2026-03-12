@@ -245,7 +245,7 @@ a {
   width: 8px;
   height: 13px;
   transform: translateY(-50%);
-  background: url("./assets/ambiguous-relaxed/icon-icon-14@3x.png") center/contain no-repeat;
+  background: url("../../assets/ambiguous-relaxed/icon-icon-14@3x.png") center/contain no-repeat;
   opacity: 0.75;
 }
 

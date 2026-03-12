@@ -35,6 +35,9 @@ npx playwright install chromium
 - 把模型首轮输出放入：
   - `generated/index.html`
   - `generated/styles.css`
+- 资源路径约定：
+  - `generated/*` 中使用 `../assets/...`（因为 `generated` 与 `assets` 同级）
+  - `examples/personal-center-round*/*` 中使用 `../../assets/...`
 - 把目标截图放入：
   - `target/1440.png`
   - `target/1024.png`
