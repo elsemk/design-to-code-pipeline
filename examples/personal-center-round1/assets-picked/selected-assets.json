@@ -1,0 +1,106 @@
+[
+  {
+    "asset": "web-nav-icon-qq@3x.png",
+    "base_name": "web-nav-icon-qq",
+    "width": 41,
+    "height": 49,
+    "best_match": {
+      "screenshot": "desktop",
+      "score": 0.9229800701141357,
+      "scale": 0.5,
+      "x": 1723,
+      "y": 1320,
+      "width": 20,
+      "height": 24
+    },
+    "second_match": {
+      "screenshot": "mobile",
+      "score": 0.7130860686302185,
+      "scale": 1.5,
+      "x": 299,
+      "y": 303,
+      "width": 62,
+      "height": 74
+    },
+    "confidence_gap": 0.2099,
+    "status": "selected"
+  },
+  {
+    "asset": "icon-icon-23@3x.png",
+    "base_name": "icon-icon-23",
+    "width": 46,
+    "height": 52,
+    "best_match": {
+      "screenshot": "mobile",
+      "score": 0.8619637489318848,
+      "scale": 0.6666666666666666,
+      "x": 749,
+      "y": 124,
+      "width": 31,
+      "height": 35
+    },
+    "second_match": {
+      "screenshot": "desktop",
+      "score": 0.8228875994682312,
+      "scale": 0.5,
+      "x": 518,
+      "y": 384,
+      "width": 23,
+      "height": 26
+    },
+    "confidence_gap": 0.0391,
+    "status": "selected"
+  },
+  {
+    "asset": "icon-icon-15@3x.png",
+    "base_name": "icon-icon-15",
+    "width": 46,
+    "height": 48,
+    "best_match": {
+      "screenshot": "desktop",
+      "score": 0.8501659631729126,
+      "scale": 0.5,
+      "x": 1932,
+      "y": 39,
+      "width": 23,
+      "height": 24
+    },
+    "second_match": {
+      "screenshot": "mobile",
+      "score": 0.669251024723053,
+      "scale": 0.5,
+      "x": 251,
+      "y": 375,
+      "width": 23,
+      "height": 24
+    },
+    "confidence_gap": 0.1809,
+    "status": "selected"
+  },
+  {
+    "asset": "web-nav-icon-tgq@3x.png",
+    "base_name": "web-nav-icon-tgq",
+    "width": 50,
+    "height": 43,
+    "best_match": {
+      "screenshot": "desktop",
+      "score": 0.845565140247345,
+      "scale": 0.5,
+      "x": 1944,
+      "y": 1321,
+      "width": 25,
+      "height": 22
+    },
+    "second_match": {
+      "screenshot": "mobile",
+      "score": 0.7285395860671997,
+      "scale": 0.5,
+      "x": 174,
+      "y": 435,
+      "width": 25,
+      "height": 22
+    },
+    "confidence_gap": 0.117,
+    "status": "selected"
+  }
+]
