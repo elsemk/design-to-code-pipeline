@@ -203,8 +203,20 @@ async function main() {
     fs.writeFile(REPORT_PATH, JSON.stringify(finalReport, null, 2), "utf8")
   ]);
 
+  // Ensure assets are resolvable when opening normalized/index.html directly via file://
+  const normalizedAssetsPath = path.join(NORMALIZED_DIR, "assets");
+  const rootAssetsPath = path.join(ROOT, "assets");
+  await fs.rm(normalizedAssetsPath, { recursive: true, force: true });
+  try {
+    const relTarget = path.relative(NORMALIZED_DIR, rootAssetsPath) || "../assets";
+    await fs.symlink(relTarget, normalizedAssetsPath, "dir");
+  } catch {
+    await fs.cp(rootAssetsPath, normalizedAssetsPath, { recursive: true });
+  }
+
   console.log(`[normalize] done -> ${OUT_HTML}`);
   console.log(`[normalize] done -> ${OUT_CSS}`);
+  console.log(`[normalize] assets linked -> ${normalizedAssetsPath}`);
   console.log(`[normalize] report -> ${REPORT_PATH}`);
 }
 

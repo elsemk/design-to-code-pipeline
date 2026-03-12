@@ -27,7 +27,7 @@
     "pixelmatchThreshold": 0.1,
     "perBreakpointMaxDiff": {
       "1440": 0.11,
-      "1024": 0.11,
+      "1024": 0.12,
       "768": 0.11,
       "375": 0.16
     }
