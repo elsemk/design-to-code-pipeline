@@ -6,12 +6,17 @@ current/
 diff/
 normalized/
 reports/
+input/
+
+# Python env
+.venv/
 
 # Keep folder placeholders
 !current/.gitkeep
 !diff/.gitkeep
 !normalized/.gitkeep
 !reports/.gitkeep
+!input/.gitkeep
 
 # Optional generated sources
 generated/*.html

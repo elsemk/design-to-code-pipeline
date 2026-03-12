@@ -5,6 +5,7 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "select-assets": "./.venv/bin/python scripts/select_assets.py",
     "normalize": "node scripts/normalize.js",
     "regress": "node scripts/regression.js",
     "check": "npm run normalize && npm run regress"

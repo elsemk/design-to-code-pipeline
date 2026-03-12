@@ -14,6 +14,7 @@ design-to-code-pipeline/
 ├── diff/                   # 差异图（回归时生成）
 ├── reports/                # normalize/regression 报告
 ├── scripts/
+│   ├── select_assets.py
 │   ├── normalize.js
 │   └── regression.js
 ├── asset-manifest.json
@@ -44,7 +45,30 @@ npx playwright install chromium
   - `design-tokens.json`（设计令牌）
   - `rules.json`（自定义规则）
 
-### 2) 运行规范化
+### 2) （可选）全量素材自动筛选
+
+当你从 Zeplin/Figma 导出了大量素材时，可以先做自动筛选：
+
+```bash
+# 初始化 Python 环境（一次即可）
+python3 -m venv .venv
+./.venv/bin/pip install -r requirements-select.txt
+
+# 准备输入
+# input/assets_raw/           放解压后的素材
+# input/screenshots/target-desktop.png
+# input/screenshots/target-mobile.png
+
+npm run select-assets
+```
+
+输出：
+- `reports/asset-selection/selected-assets.json`
+- `reports/asset-selection/ambiguous-assets.json`
+- `reports/asset-selection/unused-assets.json`
+- `reports/asset-selection/asset-manifest.auto.json`
+
+### 3) 运行规范化
 
 ```bash
 npm run normalize
