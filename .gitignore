@@ -19,6 +19,12 @@ analysis_outputs/
 !reports/.gitkeep
 !input/.gitkeep
 
+# Allow example artifacts
+!examples/**/current/
+!examples/**/current/*.png
+!examples/**/diff/
+!examples/**/diff/*.png
+
 # Optional generated sources
 generated/*.html
 generated/*.css
