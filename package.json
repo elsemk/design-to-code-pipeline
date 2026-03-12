@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "select-assets": "./.venv/bin/python scripts/select_assets.py",
+    "select-assets-relaxed": "./.venv/bin/python scripts/select_assets.py --selected-threshold 0.84 --ambiguous-threshold 0.76 --out-subdir asset-selection-relaxed",
     "normalize": "node scripts/normalize.js",
     "regress": "node scripts/regression.js",
     "check": "npm run normalize && npm run regress"

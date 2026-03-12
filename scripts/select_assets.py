@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import argparse
 import json
 import re
 from dataclasses import asdict, dataclass
@@ -14,12 +15,11 @@ SCREENSHOTS = {
     "desktop": ROOT / "input" / "screenshots" / "target-desktop.png",
     "mobile": ROOT / "input" / "screenshots" / "target-mobile.png",
 }
-OUT_DIR = ROOT / "reports" / "asset-selection"
-OUT_DIR.mkdir(parents=True, exist_ok=True)
+DEFAULT_OUT_SUBDIR = "asset-selection"
 
 SCALE_CANDIDATES = [1.0, 0.75, 2 / 3, 0.5, 1.25, 1.5]
-SELECTED_THRESHOLD = 0.90
-AMBIGUOUS_THRESHOLD = 0.82
+DEFAULT_SELECTED_THRESHOLD = 0.90
+DEFAULT_AMBIGUOUS_THRESHOLD = 0.82
 MIN_DIM = 8
 
 
@@ -127,7 +127,21 @@ def best_template_match(screen_gray: np.ndarray, templ_gray: np.ndarray) -> Tupl
     return best_score, best_scale, best_loc, best_size
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Auto-select matching assets from screenshot references")
+    parser.add_argument("--selected-threshold", type=float, default=DEFAULT_SELECTED_THRESHOLD)
+    parser.add_argument("--ambiguous-threshold", type=float, default=DEFAULT_AMBIGUOUS_THRESHOLD)
+    parser.add_argument("--out-subdir", type=str, default=DEFAULT_OUT_SUBDIR)
+    return parser.parse_args()
+
+
 def main() -> None:
+    args = parse_args()
+    selected_threshold = float(args.selected_threshold)
+    ambiguous_threshold = float(args.ambiguous_threshold)
+    out_dir = ROOT / "reports" / args.out_subdir
+    out_dir.mkdir(parents=True, exist_ok=True)
+
     if not ASSETS_DIR.exists():
         raise SystemExit(f"assets directory not found: {ASSETS_DIR}")
 
@@ -188,9 +202,9 @@ def main() -> None:
 
         if best is None:
             status = "unused"
-        elif best.score >= SELECTED_THRESHOLD and gap >= 0.01:
+        elif best.score >= selected_threshold and gap >= 0.01:
             status = "selected"
-        elif best.score >= AMBIGUOUS_THRESHOLD:
+        elif best.score >= ambiguous_threshold:
             status = "ambiguous"
         else:
             status = "unused"
@@ -223,18 +237,18 @@ def main() -> None:
             "selected": len(selected),
             "ambiguous": len(ambiguous),
             "unused": len(unused),
-            "selected_threshold": SELECTED_THRESHOLD,
-            "ambiguous_threshold": AMBIGUOUS_THRESHOLD,
+            "selected_threshold": selected_threshold,
+            "ambiguous_threshold": ambiguous_threshold,
         },
         "selected": [asdict(r) for r in selected],
         "ambiguous": [asdict(r) for r in ambiguous],
         "unused": [asdict(r) for r in unused],
     }
 
-    (OUT_DIR / "asset-match-report.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    (OUT_DIR / "selected-assets.json").write_text(json.dumps([asdict(r) for r in selected], ensure_ascii=False, indent=2), encoding="utf-8")
-    (OUT_DIR / "ambiguous-assets.json").write_text(json.dumps([asdict(r) for r in ambiguous], ensure_ascii=False, indent=2), encoding="utf-8")
-    (OUT_DIR / "unused-assets.json").write_text(json.dumps([asdict(r) for r in unused], ensure_ascii=False, indent=2), encoding="utf-8")
+    (out_dir / "asset-match-report.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    (out_dir / "selected-assets.json").write_text(json.dumps([asdict(r) for r in selected], ensure_ascii=False, indent=2), encoding="utf-8")
+    (out_dir / "ambiguous-assets.json").write_text(json.dumps([asdict(r) for r in ambiguous], ensure_ascii=False, indent=2), encoding="utf-8")
+    (out_dir / "unused-assets.json").write_text(json.dumps([asdict(r) for r in unused], ensure_ascii=False, indent=2), encoding="utf-8")
 
     # Build a quick manifest draft for selected assets
     manifest = {
@@ -254,7 +268,7 @@ def main() -> None:
             for r in selected
         ]
     }
-    (OUT_DIR / "asset-manifest.draft.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+    (out_dir / "asset-manifest.draft.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
 
     print(json.dumps(payload["summary"], ensure_ascii=False))
 

@@ -60,13 +60,17 @@ python3 -m venv .venv
 # input/screenshots/target-mobile.png
 
 npm run select-assets
+# 或者：提高召回率（会增加歧义候选）
+npm run select-assets-relaxed
 ```
 
 输出：
-- `reports/asset-selection/selected-assets.json`
-- `reports/asset-selection/ambiguous-assets.json`
-- `reports/asset-selection/unused-assets.json`
-- `reports/asset-selection/asset-manifest.auto.json`
+- 严格模式：`reports/asset-selection/*`
+- 宽松模式：`reports/asset-selection-relaxed/*`
+  - `selected-assets.json`
+  - `ambiguous-assets.json`
+  - `unused-assets.json`
+  - `asset-manifest.draft.json`
 
 ### 3) 运行规范化
 
