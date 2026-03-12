@@ -1,0 +1,39 @@
+{
+  "version": "0.1",
+  "notes": "Round2 proposal: map ambiguous assets to concrete UI roles before automated patching.",
+  "roles": [
+    {
+      "role": "menu_item_chevron_right",
+      "asset": "assets/ambiguous-relaxed/icon-icon-14@3x.png",
+      "confidence": "high"
+    },
+    {
+      "role": "contact_recommend_icon",
+      "asset": "assets/ambiguous-relaxed/web-nav-icon-tt@3x.png",
+      "confidence": "high"
+    },
+    {
+      "role": "comment_or_message_icon",
+      "asset": "assets/ambiguous-relaxed/icon-icon-21@3x.png",
+      "confidence": "medium"
+    },
+    {
+      "role": "user_or_profile_aux_icon",
+      "asset": "assets/ambiguous-relaxed/icon-icon-19@3x.png",
+      "confidence": "medium"
+    },
+    {
+      "role": "arrow_emphasis_alt",
+      "asset": "assets/ambiguous-relaxed/invalid-name@3x.png",
+      "confidence": "medium"
+    }
+  ],
+  "deferred": [
+    "assets/ambiguous-relaxed/2@3x.png",
+    "assets/ambiguous-relaxed/3@3x.png",
+    "assets/ambiguous-relaxed/4@3x.png",
+    "assets/ambiguous-relaxed/5@3x.png",
+    "assets/ambiguous-relaxed/6@3x.png",
+    "assets/ambiguous-relaxed/7@3x.png"
+  ]
+}
