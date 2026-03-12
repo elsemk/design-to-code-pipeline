@@ -1,0 +1,165 @@
+{
+  "version": "1.0",
+  "assets": [
+    {
+      "layerName": "icon/icon-第一",
+      "alias": "hot-rank-1",
+      "path": "zeplin-2x/hot-rank-1.png",
+      "densityScale": 2,
+      "sourceUrl": "https://cdn.zeplin.io/6602721e48e492d8a5002a3e/assets/255D7EFC-A095-4336-9380-A86FE24F0F07.png",
+      "itemIndex": 0
+    },
+    {
+      "layerName": "icon/icon-第二",
+      "alias": "hot-rank-2",
+      "path": "zeplin-2x/hot-rank-2.png",
+      "densityScale": 2,
+      "sourceUrl": "https://cdn.zeplin.io/6602721e48e492d8a5002a3e/assets/D39F6D75-217B-42E3-88E1-D635CCF4B49F.png",
+      "itemIndex": 2
+    },
+    {
+      "layerName": "icon/icon-第三",
+      "alias": "hot-rank-3",
+      "path": "zeplin-2x/hot-rank-3.png",
+      "densityScale": 2,
+      "sourceUrl": "https://cdn.zeplin.io/6602721e48e492d8a5002a3e/assets/80FA0D58-4458-4642-8192-B3EE679CF987.png",
+      "itemIndex": 4
+    },
+    {
+      "layerName": "icon/icon-热门",
+      "alias": "hot-fire",
+      "path": "zeplin-2x/hot-fire.png",
+      "densityScale": 2,
+      "sourceUrl": "https://cdn.zeplin.io/6602721e48e492d8a5002a3e/assets/0F9361CA-E687-44AA-A9B7-7B8CB918BF24.png",
+      "itemIndex": 1
+    },
+    {
+      "layerName": "icon/icon-右箭头",
+      "alias": "menu-arrow",
+      "path": "zeplin-2x/menu-arrow.png",
+      "densityScale": 2,
+      "sourceUrl": "https://cdn.zeplin.io/6602721e48e492d8a5002a3e/assets/B7E5D800-9ABF-42C1-8688-8DC685B04F70.png",
+      "itemIndex": 13
+    },
+    {
+      "layerName": "icon/icon-投稿",
+      "alias": "publish-icon",
+      "path": "zeplin-2x/publish-icon.png",
+      "densityScale": 2,
+      "sourceUrl": "https://cdn.zeplin.io/6602721e48e492d8a5002a3e/assets/15327A6C-A142-4CD3-B5AB-0B98C48E0BDF.png",
+      "itemIndex": 46
+    },
+    {
+      "layerName": "web/icon/icon-搜索",
+      "alias": "search-icon",
+      "path": "zeplin-2x/search-icon.png",
+      "densityScale": 2,
+      "sourceUrl": "https://cdn.zeplin.io/6602721e48e492d8a5002a3e/assets/9106D38F-19C3-46EB-B926-3DD026DD9F59.png",
+      "itemIndex": 47
+    },
+    {
+      "layerName": "猎奇社logo文件",
+      "alias": "logo",
+      "path": "zeplin-2x/logo.png",
+      "densityScale": 2,
+      "sourceUrl": "https://cdn.zeplin.io/6602721e48e492d8a5002a3e/assets/6E37DF88-6F58-40EF-BAC1-5031DED30151.png",
+      "itemIndex": 48
+    },
+    {
+      "layerName": "icon/icon-换头像",
+      "alias": "avatar-change",
+      "path": "zeplin-2x/avatar-change.png",
+      "densityScale": 2,
+      "sourceUrl": "https://cdn.zeplin.io/6602721e48e492d8a5002a3e/assets/35A66834-AD53-4233-9782-2038A6D5D757.png",
+      "itemIndex": 49
+    },
+    {
+      "layerName": "icon/icon-问题",
+      "alias": "menu-question",
+      "path": "zeplin-2x/menu-question.png",
+      "densityScale": 2,
+      "sourceUrl": "https://cdn.zeplin.io/6602721e48e492d8a5002a3e/assets/248C07D5-FAE0-4B14-B799-533D33121A50.png",
+      "itemIndex": 50
+    },
+    {
+      "layerName": "icon/icon-历史",
+      "alias": "menu-history",
+      "path": "zeplin-2x/menu-history.png",
+      "densityScale": 2,
+      "sourceUrl": "https://cdn.zeplin.io/6602721e48e492d8a5002a3e/assets/C07C57AA-5B47-4A71-9BEC-8BEEB8CBF8ED.png",
+      "itemIndex": 51
+    },
+    {
+      "layerName": "icon/icon-关注",
+      "alias": "menu-follow",
+      "path": "zeplin-2x/menu-follow.png",
+      "densityScale": 2,
+      "sourceUrl": "https://cdn.zeplin.io/6602721e48e492d8a5002a3e/assets/49296ECB-DE4A-4647-A02F-893C428263F2.png",
+      "itemIndex": 52
+    },
+    {
+      "layerName": "icon/icon-发布",
+      "alias": "menu-post",
+      "path": "zeplin-2x/menu-post.png",
+      "densityScale": 2,
+      "sourceUrl": "https://cdn.zeplin.io/6602721e48e492d8a5002a3e/assets/896C2F38-5B21-40A0-BC27-7654D900CCB1.png",
+      "itemIndex": 53
+    },
+    {
+      "layerName": "icon/icon-评论",
+      "alias": "menu-comment",
+      "path": "zeplin-2x/menu-comment.png",
+      "densityScale": 2,
+      "sourceUrl": "https://cdn.zeplin.io/6602721e48e492d8a5002a3e/assets/681C02EF-DE8A-4E2B-B6D6-AD0CE257FE6B.png",
+      "itemIndex": 54
+    },
+    {
+      "layerName": "icon/icon-收藏",
+      "alias": "menu-favorite",
+      "path": "zeplin-2x/menu-favorite.png",
+      "densityScale": 2,
+      "sourceUrl": "https://cdn.zeplin.io/6602721e48e492d8a5002a3e/assets/91819F8F-AF64-4E6F-B727-10508AC6D0D3.png",
+      "itemIndex": 55
+    },
+    {
+      "layerName": "icon/icon-个人",
+      "alias": "menu-personal",
+      "path": "zeplin-2x/menu-personal.png",
+      "densityScale": 2,
+      "sourceUrl": "https://cdn.zeplin.io/6602721e48e492d8a5002a3e/assets/7C2E240E-299F-47E0-805D-D26DC855A758.png",
+      "itemIndex": 56
+    },
+    {
+      "layerName": "web/nav/icon-QQ备份",
+      "alias": "contact-qq",
+      "path": "zeplin-2x/contact-qq.png",
+      "densityScale": 2,
+      "sourceUrl": "https://cdn.zeplin.io/6602721e48e492d8a5002a3e/assets/75D385A9-4B5D-4FAA-9DD5-9047F71737D9.png",
+      "itemIndex": 42
+    },
+    {
+      "layerName": "web/nav/icon-tgq备份",
+      "alias": "contact-tg",
+      "path": "zeplin-2x/contact-tg.png",
+      "densityScale": 2,
+      "sourceUrl": "https://cdn.zeplin.io/6602721e48e492d8a5002a3e/assets/25BCC639-F531-42A9-AA48-F5277094A632.png",
+      "itemIndex": 43
+    },
+    {
+      "layerName": "web/nav/icon-swhz备份",
+      "alias": "contact-biz",
+      "path": "zeplin-2x/contact-biz.png",
+      "densityScale": 2,
+      "sourceUrl": "https://cdn.zeplin.io/6602721e48e492d8a5002a3e/assets/DE59035C-36E9-4EB9-9CC7-FEF9D0A2FF2A.png",
+      "itemIndex": 44
+    },
+    {
+      "layerName": "web/nav/icon-tt备份",
+      "alias": "contact-reco",
+      "path": "zeplin-2x/contact-reco.png",
+      "densityScale": 2,
+      "sourceUrl": "https://cdn.zeplin.io/6602721e48e492d8a5002a3e/assets/CB87E449-C165-4074-A1D0-FD6D7A4003C6.png",
+      "itemIndex": 45
+    }
+  ]
+}
