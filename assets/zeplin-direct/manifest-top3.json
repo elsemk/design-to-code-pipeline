@@ -1,0 +1,52 @@
+{
+  "source": "zeplin assets_v4 direct export",
+  "screenId": "6909b10c9a1f16421ab2dd00",
+  "versionId": "6909b10c9a1f16421ab2dd01",
+  "exportedAt": "2026-03-12T00:00:00Z",
+  "assets": [
+    {
+      "layerName": "icon/icon-第一",
+      "name": "hot-rank-1",
+      "files": [
+        "hot-rank-1.svg",
+        "hot-rank-1-1.png",
+        "hot-rank-1-2.png",
+        "hot-rank-1-3.png",
+        "hot-rank-1-4.png"
+      ]
+    },
+    {
+      "layerName": "icon/icon-第二",
+      "name": "hot-rank-2",
+      "files": [
+        "hot-rank-2.svg",
+        "hot-rank-2-1.png",
+        "hot-rank-2-2.png",
+        "hot-rank-2-3.png",
+        "hot-rank-2-4.png"
+      ]
+    },
+    {
+      "layerName": "icon/icon-第三",
+      "name": "hot-rank-3",
+      "files": [
+        "hot-rank-3.svg",
+        "hot-rank-3-1.png",
+        "hot-rank-3-2.png",
+        "hot-rank-3-3.png",
+        "hot-rank-3-4.png"
+      ]
+    },
+    {
+      "layerName": "icon/icon-热门",
+      "name": "hot-fire",
+      "files": [
+        "hot-fire.svg",
+        "hot-fire-1.png",
+        "hot-fire-2.png",
+        "hot-fire-3.png",
+        "hot-fire-4.png"
+      ]
+    }
+  ]
+}

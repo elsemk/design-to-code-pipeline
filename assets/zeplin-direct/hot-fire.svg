@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>2DDCB969-CA38-4655-AEBC-A6F143A4ED3B</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="14" height="14"></rect>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2.1个人中心-个人信息-猎奇社web" transform="translate(-1490, -175)">
+            <g id="编组-15" transform="translate(1200, 106)">
+                <g id="编组-3" transform="translate(20, 66)">
+                    <g id="编组-2" transform="translate(270, 0)">
+                        <g id="icon/icon-热门" transform="translate(0, 3)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="蒙版"></g>
+                            <path d="M11.9872263,7.8612532 C11.9872263,7.22442455 11.6409259,5.81649616 10.889014,4.39322251 C10.8756212,4.86892583 10.4910556,6.02173913 10.2078928,6.3286445 C10.0184799,5.7915601 9.97064839,2.20652174 5.25445821,1 C5.54144747,4.56585678 2,4.5140665 2,8.36189258 C2,10.4066496 3.22257425,12.165601 4.97320874,12.9462916 C4.57333704,10.5869565 6.89795005,10.2838875 6.52295075,7.85358056 C8.97192577,9.32289003 9.54781755,11.0415601 8.88582899,13 C10.8411825,12.1790281 12.1441137,10.1246803 11.9872263,7.8612532 Z" id="路径" fill="#FF1B1B" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

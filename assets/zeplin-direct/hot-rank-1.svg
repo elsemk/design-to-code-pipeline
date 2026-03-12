@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>8D5BCD97-0D3E-4021-A70A-E0DD58D336D7</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="14" height="14"></rect>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#FFEE10" offset="0%"></stop>
+            <stop stop-color="#EFA84F" offset="100%"></stop>
+        </linearGradient>
+        <text id="text-4" font-family="YouSheBiaoTiHei" font-size="15" font-weight="normal">
+            <tspan x="4.105" y="12">1</tspan>
+        </text>
+        <filter x="-27.4%" y="14.6%" width="188.2%" height="78.4%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="1" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.945098039   0 0 0 0 0.682352941   0 0 0 0 0.356862745  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2.1个人中心-个人信息-猎奇社web" transform="translate(-1220, -175)">
+            <g id="编组-15" transform="translate(1200, 106)">
+                <g id="编组-3" transform="translate(20, 66)">
+                    <g id="icon/icon-第一" transform="translate(0, 3)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="蒙版"></g>
+                        <g id="1" fill-rule="nonzero" mask="url(#mask-2)">
+                            <use fill="#D8D8D8" fill-opacity="1" filter="url(#filter-5)" xlink:href="#text-4"></use>
+                            <use fill="url(#linearGradient-3)" xlink:href="#text-4"></use>
+                            <use fill="#D8D8D8" fill-opacity="1" xlink:href="#text-4"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
